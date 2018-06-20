@@ -40,36 +40,28 @@
         if (unit == "$") {
             amount = amount * usdRate;
             exchange = true;
-        }
-        else if (unit == "£") {
+        } else if (unit == "£") {
             amount = amount * gbpRate;
             exchange = true;
-        }
-        else if (unit == "€") {
+        } else if (unit == "€") {
             amount = amount * eurRate;
             exchange = true;
-        }
-        else if (unit == "NT$") {
+        } else if (unit == "NT$") {
             amount = amount * ntdRate;
             exchange = true;
-        }
-        else if (unit == "HK$") {
+        } else if (unit == "HK$") {
             amount = amount * hkdRate;
             exchange = true;
-        }
-        else if (unit == "₩") {
+        } else if (unit == "₩") {
             amount = amount * krwRate;
             exchange = true;
-        }
-        else if (unit == "CA$") {
+        } else if (unit == "CA$") {
             amount = amount * cadRate;
             exchange = true;
-        }
-        else if (unit == "CHF") {
+        } else if (unit == "CHF") {
             amount = amount * chfRate;
             exchange = true;
-        }
-        else if (baseUnit.indexOf(unit) == -1) {
+        } else if (baseUnit.indexOf(unit) == -1) {
             console.log(`[${appTitle}] Unknown unit: ${unit}`);
             return false;
         }
@@ -101,7 +93,7 @@
 
     // 追加されたSuper Chatを拾う
     insertionQ.config({
-        timeout : 5
+        timeout: 5
     });
     insertionQ("yt-live-chat-paid-message-renderer").every(function (element) {
         var name = $(element).find("#author-name").text();
